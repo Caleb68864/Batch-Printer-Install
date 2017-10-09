@@ -29,10 +29,9 @@ class GUI:
     def __init__(self):
         self.p = Printer()
 
-
         self.btnwidth = 35
         self.be = BackEnd()
-        self.printers = self.p.getPrinters()
+        self.printers = self.p.getActivePrinters()
         self.checkboxes = {}
         self.window = Tk()
         self.window.wm_title("Batch Printer Install")

@@ -1,9 +1,8 @@
 import os
-from printer import Printer
 
 
 class BackEnd:
-    
+
     def removePrinter(self, printer):
         remove = 'rundll32 printui.dll,PrintUIEntry /dn /n {} /q'
         os.system(remove.format(printer))

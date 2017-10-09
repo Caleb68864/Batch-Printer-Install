@@ -31,10 +31,14 @@ class Printer(Base):
         self.session.commit()
 
     def getPrinters(self):
-        printers = self.session.query(Printer).filter(Printer.active == 1)
+        printers = self.session.query(Printer).all()
         #print(printers)
         # for printer in printers:
         #      print(printer.id)
+        return printers
+
+    def getActivePrinters(self):
+        printers = self.session.query(Printer).filter(Printer.active == 1)
         return printers
 
     def getInactivePrinters(self):
